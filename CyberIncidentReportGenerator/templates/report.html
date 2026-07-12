@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block title %}CyberGuard | Incident Report{% endblock %}
+
+{% block content %}
+<div class="report-header">
+  <h1 class="page-title">Incident Report &mdash; {{ data.incident_id }}</h1>
+  <span class="badge severity-{{ data.severity | lower }}">{{ data.severity }}</span>
+</div>
+
+<div class="report-meta-grid">
+  <div><strong>Date:</strong> {{ data.date }}</div>
+  <div><strong>Time:</strong> {{ data.time }}</div>
+  <div><strong>Attack Type:</strong> {{ data.attack_type }}</div>
+  <div><strong>Source IP:</strong> {{ data.source_ip }}</div>
+  <div><strong>Destination:</strong> {{ data.destination_system }}</div>
+  <div><strong>Affected User:</strong> {{ data.affected_user }}</div>
+  <div><strong>Malware:</strong> {{ data.malware }}</div>
+  <div><strong>Detection Tool:</strong> {{ data.detection_tool }}</div>
+  <div><strong>Status:</strong> {{ data.status }}</div>
+  <div><strong>Action Taken:</strong> {{ data.action_taken }}</div>
+</div>
+
+<div class="report-body">
+  {% if sections %}
+    <section class="report-section">
+      <h2>1. Executive Summary</h2>
+      <p>{{ sections.executive_summary }}</p>
+    </section>
+    <section class="report-section">
+      <h2>2. Technical Details</h2>
+      <p>{{ sections.technical_details }}</p>
+    </section>
+    <section class="report-section">
+      <h2>3. Incident Impact</h2>
+      <p>{{ sections.incident_impact }}</p>
+    </section>
+    <section class="report-section">
+      <h2>4. Response Taken</h2>
+      <p>{{ sections.response_taken }}</p>
+    </section>
+    <section class="report-section">
+      <h2>5. Recommendations</h2>
+      <p>{{ sections.recommendations }}</p>
+    </section>
+  {% else %}
+    <pre class="report-plain-text">{{ plain_text }}</pre>
+  {% endif %}
+</div>
+
+<div class="form-actions">
+  {% if not saved %}
+    <form action="{{ url_for('save') }}" method="POST" style="display:inline;">
+      <button type="submit" class="btn btn-primary">Save Report</button>
+    </form>
+    <a href="{{ url_for('download_preview_pdf') }}" class="btn btn-secondary">Download PDF</a>
+  {% else %}
+    <a href="{{ url_for('download_saved_pdf', report_id=report_id) }}" class="btn btn-secondary">Download PDF</a>
+    <form action="{{ url_for('delete', report_id=report_id) }}" method="POST" style="display:inline;"
+          onsubmit="return confirm('Delete this report permanently?');">
+      <button type="submit" class="btn btn-danger">Delete Report</button>
+    </form>
+  {% endif %}
+  <a href="{{ url_for('incident_form') }}" class="btn btn-outline">Generate Another Report</a>
+</div>
+{% endblock %}

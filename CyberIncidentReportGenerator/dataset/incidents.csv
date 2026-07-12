@@ -1,0 +1,121 @@
+incident_id,date,time,attack_type,severity,source_ip,destination_system,affected_user,malware,detection_tool,status,action_taken
+INC-1001,2025-10-09,07:14,Insider Threat,Low,36.52.44.152,Finance System,Alice Johnson,N/A,CrowdStrike Falcon,Investigating,Reset User Credentials
+INC-1002,2025-07-23,22:41,DDoS,Critical,180.214.112.115,Cloud Storage Bucket,Priya Nguyen,N/A,SIEM (Splunk),Investigating,Blocked Malicious Domain
+INC-1003,2025-06-09,06:48,SQL Injection,Medium,87.52.47.98,Web Server,David Patel,N/A,Nessus Scanner,Closed,Applied Security Patch
+INC-1004,2026-04-16,17:07,DNS Spoofing,Low,97.40.150.213,Customer Database,Emma Wilson,N/A,Nessus Scanner,Closed,Reset User Credentials
+INC-1005,2025-08-22,09:05,Credential Stuffing,Low,219.119.51.98,Domain Controller,Wei Miller,N/A,Nessus Scanner,Investigating,Restored from Backup
+INC-1006,2025-03-15,19:40,Ransomware,High,44.125.83.119,Finance System,Priya Wilson,Ryuk,Fail2Ban,Investigating,Revoked Access Tokens
+INC-1007,2025-08-23,01:51,Ransomware,Critical,81.205.137.17,File Server,Tom Brown,Trojan.GenKD,Nessus Scanner,Investigating,Revoked Access Tokens
+INC-1008,2026-04-15,04:16,Cross Site Scripting,Medium,36.126.134.192,Cloud Storage Bucket,Fatima Wilson,N/A,AWS GuardDuty,Resolved,Restored from Backup
+INC-1009,2026-06-06,15:05,Worm,Critical,194.24.56.40,Customer Database,Maria Nguyen,TrickBot,IBM QRadar,Closed,Isolated Affected Host
+INC-1010,2026-04-25,16:16,SQL Injection,Medium,142.5.58.175,Employee Workstation,Noah Sharma,N/A,Nessus Scanner,Open,Applied Security Patch
+INC-1011,2025-01-04,23:56,SQL Injection,Low,185.134.91.130,Web Server,Aisha Miller,N/A,Wireshark,Closed,Notified Affected Users
+INC-1012,2026-06-28,00:38,Worm,Low,83.250.9.29,HR Portal,Tom Patel,TrickBot,Wireshark,Investigating,Blocked Source IP
+INC-1013,2025-03-29,23:31,Worm,Critical,209.35.64.33,Customer Database,Wei Diaz,Emotet,Snort IDS,Contained,Ran Full Antivirus Scan
+INC-1014,2025-08-05,17:48,Zero-Day Attack,Critical,187.102.159.103,Customer Database,Liam Lee,N/A,Palo Alto Firewall Logs,Closed,Deployed Firewall Rule
+INC-1015,2025-12-13,00:37,Malware,Medium,142.117.112.2,Web Server,Sofia Miller,Emotet,SIEM (Splunk),Investigating,Isolated Affected Host
+INC-1016,2025-03-14,16:15,Phishing,High,72.248.109.139,Database Server,Sofia Wilson,N/A,AWS GuardDuty,Closed,Deployed Firewall Rule
+INC-1017,2025-07-14,03:06,Worm,High,169.220.181.109,Finance System,Wei Patel,Zeus,SIEM (Splunk),Open,Blocked Source IP
+INC-1018,2025-04-22,07:12,SQL Injection,High,49.229.71.109,Database Server,Priya Chen,N/A,Microsoft Defender,Open,Deployed Firewall Rule
+INC-1019,2025-04-11,01:41,DNS Spoofing,Critical,139.7.47.238,Internal Wiki,Aisha Smith,N/A,Snort IDS,Resolved,Deployed Firewall Rule
+INC-1020,2026-02-15,01:10,Cross Site Scripting,Medium,98.1.199.68,Internal Wiki,Noah Chen,N/A,Wireshark,Resolved,Blocked Malicious Domain
+INC-1021,2026-05-14,04:12,Credential Stuffing,Critical,76.111.29.149,Payment Gateway,Carlos Johnson,N/A,Nessus Scanner,Open,Blocked Source IP
+INC-1022,2026-06-28,05:03,Brute Force,Medium,131.41.95.18,Cloud Storage Bucket,Raj Miller,N/A,Microsoft Defender,Resolved,Isolated Affected Host
+INC-1023,2025-02-10,19:05,Brute Force,Low,108.161.133.53,Customer Database,Sofia Lee,N/A,Microsoft Defender,Contained,Escalated to Incident Response Team
+INC-1024,2026-04-14,10:59,Trojan,High,193.37.4.118,Cloud Storage Bucket,Emma Kumar,Ryuk,CrowdStrike Falcon,Closed,Reset User Credentials
+INC-1025,2025-12-24,02:56,DDoS,High,63.189.145.41,VPN Gateway,Aisha Diaz,N/A,Wireshark,Closed,Revoked Access Tokens
+INC-1026,2025-11-03,21:06,DDoS,Low,35.135.59.228,Web Server,Sofia Diaz,N/A,Snort IDS,Contained,Applied Security Patch
+INC-1027,2025-12-18,06:43,Brute Force,Low,163.135.250.65,CRM System,Alice Kumar,N/A,IBM QRadar,Contained,Blocked Source IP
+INC-1028,2025-05-14,20:16,Phishing,Medium,42.226.218.144,Mail Server,Raj Kumar,N/A,Snort IDS,Closed,Blocked Source IP
+INC-1029,2025-06-01,13:08,Zero-Day Attack,High,11.157.186.231,Internal Wiki,Aisha Johnson,N/A,Nessus Scanner,Investigating,Revoked Access Tokens
+INC-1030,2026-02-21,19:47,Worm,High,40.121.83.250,Internal Wiki,Noah Garcia,AgentTesla,IBM QRadar,Open,Disabled User Account
+INC-1031,2026-02-26,21:55,Credential Stuffing,High,189.127.136.41,Internal Wiki,Sofia Kumar,N/A,IBM QRadar,Open,Deployed Firewall Rule
+INC-1032,2025-12-25,09:52,Worm,Low,204.116.114.7,Customer Database,John Khan,Locky,Nessus Scanner,Contained,Isolated Affected Host
+INC-1033,2026-06-06,12:43,DNS Spoofing,Medium,216.169.14.30,Domain Controller,Maria Brown,N/A,Wireshark,Open,Isolated Affected Host
+INC-1034,2025-11-18,13:38,Brute Force,Medium,131.59.197.231,Cloud Storage Bucket,John Sharma,N/A,SIEM (Splunk),Resolved,Blocked Source IP
+INC-1035,2025-07-21,11:27,DDoS,Critical,18.169.160.170,CRM System,Raj Rossi,N/A,Wireshark,Closed,Applied Security Patch
+INC-1036,2026-02-17,22:18,Insider Threat,Medium,142.65.98.108,Customer Database,Fatima Miller,N/A,Snort IDS,Closed,Notified Affected Users
+INC-1037,2025-11-08,09:13,Spyware,Medium,111.164.238.114,VPN Gateway,Liam Smith,Trojan.GenKD,Fail2Ban,Resolved,Blocked Malicious Domain
+INC-1038,2026-06-12,21:40,Trojan,High,159.171.47.210,Internal Wiki,John Miller,Ryuk,Wireshark,Investigating,Reset User Credentials
+INC-1039,2026-05-02,19:54,Trojan,Low,197.37.233.107,Customer Database,Emma Smith,WannaCry,IBM QRadar,Resolved,Escalated to Incident Response Team
+INC-1040,2025-01-06,03:49,Worm,Low,109.112.90.206,Payment Gateway,Carlos Chen,N/A,SIEM (Splunk),Closed,Reset User Credentials
+INC-1041,2025-05-17,14:42,Zero-Day Attack,Medium,136.162.226.157,CRM System,Sofia Wilson,N/A,Fail2Ban,Resolved,Ran Full Antivirus Scan
+INC-1042,2026-05-02,14:16,Cross Site Scripting,Critical,193.126.141.197,Internal Wiki,Carlos Chen,N/A,Microsoft Defender,Contained,Deployed Firewall Rule
+INC-1043,2025-10-06,10:20,Malware,High,139.41.70.39,File Server,Fatima Rossi,WannaCry,Snort IDS,Investigating,Isolated Affected Host
+INC-1044,2026-04-23,13:03,SQL Injection,Medium,53.215.199.232,Internal Wiki,Emma Rossi,N/A,SIEM (Splunk),Closed,Escalated to Incident Response Team
+INC-1045,2025-12-27,09:48,Cross Site Scripting,Low,100.214.112.125,File Server,Priya Khan,N/A,Palo Alto Firewall Logs,Open,Escalated to Incident Response Team
+INC-1046,2025-06-19,14:58,Ransomware,Critical,33.13.201.152,Cloud Storage Bucket,Liam Johnson,Zeus,CrowdStrike Falcon,Resolved,Disabled User Account
+INC-1047,2025-02-21,08:24,Zero-Day Attack,High,84.108.232.84,HR Portal,Noah Wilson,N/A,IBM QRadar,Contained,Escalated to Incident Response Team
+INC-1048,2025-01-20,23:34,Spyware,High,14.179.114.167,Web Server,Noah Miller,Locky,SIEM (Splunk),Open,Reset User Credentials
+INC-1049,2025-06-06,07:08,Worm,High,122.58.111.120,Payment Gateway,Priya Nguyen,REvil,Nessus Scanner,Investigating,Notified Affected Users
+INC-1050,2025-04-28,05:19,Brute Force,Critical,28.13.159.148,Customer Database,Tom Khan,N/A,IBM QRadar,Investigating,Isolated Affected Host
+INC-1051,2025-09-06,03:44,Brute Force,Medium,198.154.61.204,Cloud Storage Bucket,Noah Johnson,N/A,Nessus Scanner,Closed,Escalated to Incident Response Team
+INC-1052,2026-06-03,20:21,Insider Threat,Medium,4.215.250.28,Finance System,David Miller,N/A,Palo Alto Firewall Logs,Investigating,Escalated to Incident Response Team
+INC-1053,2025-10-04,19:51,Trojan,High,138.247.238.112,CRM System,Sofia Brown,Qbot,Wireshark,Contained,Reset User Credentials
+INC-1054,2025-10-13,14:15,Zero-Day Attack,Critical,193.237.194.87,Mail Server,Wei Patel,N/A,Nessus Scanner,Investigating,Deployed Firewall Rule
+INC-1055,2025-12-15,08:56,Worm,Medium,153.141.5.133,File Server,Raj Smith,Ryuk,IBM QRadar,Resolved,Ran Full Antivirus Scan
+INC-1056,2026-05-03,20:45,DNS Spoofing,Medium,126.229.8.24,Domain Controller,John Khan,N/A,Microsoft Defender,Contained,Revoked Access Tokens
+INC-1057,2026-06-28,11:27,Brute Force,Medium,191.169.180.180,VPN Gateway,Priya Sharma,N/A,Wireshark,Investigating,Isolated Affected Host
+INC-1058,2025-05-03,23:34,Credential Stuffing,Low,196.94.98.56,Payment Gateway,Wei Sharma,N/A,AWS GuardDuty,Closed,Notified Affected Users
+INC-1059,2025-10-31,07:23,Spyware,Critical,46.154.7.182,Employee Workstation,Maria Sharma,WannaCry,SIEM (Splunk),Open,Ran Full Antivirus Scan
+INC-1060,2026-05-18,03:55,Spyware,High,4.145.240.123,VPN Gateway,David Garcia,TrickBot,SIEM (Splunk),Contained,Deployed Firewall Rule
+INC-1061,2026-05-19,02:36,Malware,High,162.27.77.39,Internal Wiki,Emma Sharma,Zeus,CrowdStrike Falcon,Investigating,Isolated Affected Host
+INC-1062,2025-08-20,16:24,DDoS,Critical,116.226.152.221,Cloud Storage Bucket,Fatima Sharma,N/A,AWS GuardDuty,Closed,Blocked Source IP
+INC-1063,2025-04-12,06:40,Brute Force,Critical,55.135.41.41,File Server,Maria Diaz,N/A,CrowdStrike Falcon,Investigating,Blocked Source IP
+INC-1064,2026-04-27,09:02,SQL Injection,Medium,60.147.144.180,CRM System,Wei Kumar,N/A,Microsoft Defender,Contained,Revoked Access Tokens
+INC-1065,2025-07-22,13:07,Brute Force,Medium,140.115.76.233,Domain Controller,Aisha Garcia,N/A,CrowdStrike Falcon,Open,Disabled User Account
+INC-1066,2025-10-23,14:07,DNS Spoofing,Medium,120.155.206.242,Domain Controller,Carlos Diaz,N/A,Palo Alto Firewall Logs,Resolved,Isolated Affected Host
+INC-1067,2026-03-19,23:20,Brute Force,Low,155.128.13.24,File Server,Liam Patel,N/A,AWS GuardDuty,Closed,Blocked Source IP
+INC-1068,2025-10-03,18:02,DNS Spoofing,High,196.89.240.133,Customer Database,Wei Wilson,N/A,Wireshark,Investigating,Notified Affected Users
+INC-1069,2026-05-19,02:30,SQL Injection,High,90.209.170.83,Customer Database,Raj Patel,N/A,Snort IDS,Contained,Escalated to Incident Response Team
+INC-1070,2026-02-15,17:02,Credential Stuffing,Medium,117.45.161.65,HR Portal,Raj Nguyen,N/A,IBM QRadar,Closed,Blocked Source IP
+INC-1071,2026-04-19,13:03,Insider Threat,Critical,49.185.255.161,VPN Gateway,Noah Johnson,N/A,Microsoft Defender,Contained,Ran Full Antivirus Scan
+INC-1072,2026-05-12,03:01,Trojan,Critical,162.122.81.80,Employee Workstation,Alice Diaz,Locky,IBM QRadar,Open,Reset User Credentials
+INC-1073,2026-04-18,03:41,Zero-Day Attack,Critical,214.78.255.239,Payment Gateway,Priya Diaz,N/A,Wireshark,Resolved,Deployed Firewall Rule
+INC-1074,2025-05-29,12:12,Cross Site Scripting,Medium,154.69.35.71,Internal Wiki,Noah Patel,N/A,IBM QRadar,Contained,Ran Full Antivirus Scan
+INC-1075,2025-11-02,18:37,Spyware,High,169.250.76.115,Employee Workstation,Wei Lee,Ryuk,Nessus Scanner,Closed,Ran Full Antivirus Scan
+INC-1076,2025-11-26,06:44,SQL Injection,Medium,62.196.119.220,Internal Wiki,Fatima Johnson,N/A,Nessus Scanner,Resolved,Blocked Malicious Domain
+INC-1077,2025-06-05,15:02,DNS Spoofing,Medium,33.169.51.224,CRM System,Wei Kumar,N/A,Fail2Ban,Resolved,Blocked Source IP
+INC-1078,2025-06-08,02:30,Credential Stuffing,Low,201.135.173.160,Payment Gateway,Fatima Miller,N/A,CrowdStrike Falcon,Contained,Revoked Access Tokens
+INC-1079,2025-11-21,20:45,Zero-Day Attack,High,195.249.18.159,Web Server,John Miller,N/A,Wireshark,Investigating,Blocked Malicious Domain
+INC-1080,2025-04-13,14:10,Malware,Medium,178.153.14.12,HR Portal,Noah Johnson,Emotet,Wireshark,Contained,Restored from Backup
+INC-1081,2026-06-28,13:36,SQL Injection,Low,175.92.87.45,Web Server,Emma Patel,N/A,IBM QRadar,Closed,Revoked Access Tokens
+INC-1082,2025-05-27,07:29,Worm,Medium,164.130.235.66,Customer Database,Alice Wilson,REvil,Palo Alto Firewall Logs,Contained,Revoked Access Tokens
+INC-1083,2026-03-29,11:37,DDoS,Medium,77.217.128.117,CRM System,Priya Smith,N/A,IBM QRadar,Resolved,Isolated Affected Host
+INC-1084,2025-10-30,22:18,Worm,Medium,6.202.140.3,Cloud Storage Bucket,Aisha Miller,AgentTesla,SIEM (Splunk),Closed,Blocked Malicious Domain
+INC-1085,2025-10-21,07:38,Cross Site Scripting,High,206.180.112.163,File Server,Emma Sharma,N/A,Snort IDS,Open,Revoked Access Tokens
+INC-1086,2026-03-28,01:37,Insider Threat,Low,94.67.46.233,Domain Controller,David Rossi,N/A,IBM QRadar,Investigating,Reset User Credentials
+INC-1087,2026-06-28,16:58,Trojan,High,70.84.131.234,CRM System,Wei Nguyen,AgentTesla,Wireshark,Contained,Isolated Affected Host
+INC-1088,2025-05-25,07:55,Cross Site Scripting,Critical,174.203.187.24,Internal Wiki,Fatima Johnson,N/A,Wireshark,Closed,Isolated Affected Host
+INC-1089,2025-09-26,18:24,Cross Site Scripting,Medium,211.190.55.173,File Server,Wei Johnson,N/A,AWS GuardDuty,Closed,Restored from Backup
+INC-1090,2025-03-06,20:52,Brute Force,Low,119.154.209.30,Database Server,Alice Johnson,N/A,Wireshark,Resolved,Isolated Affected Host
+INC-1091,2025-05-19,12:29,Malware,Medium,95.214.79.227,Finance System,Liam Kumar,NotPetya,Palo Alto Firewall Logs,Closed,Escalated to Incident Response Team
+INC-1092,2025-08-11,14:28,Spyware,Low,61.185.50.252,Customer Database,David Diaz,AgentTesla,Nessus Scanner,Open,Escalated to Incident Response Team
+INC-1093,2026-04-11,02:42,Spyware,Low,55.10.25.202,HR Portal,John Garcia,Emotet,AWS GuardDuty,Investigating,Isolated Affected Host
+INC-1094,2025-08-01,18:13,Zero-Day Attack,Critical,209.119.168.199,Database Server,Noah Wilson,N/A,AWS GuardDuty,Open,Applied Security Patch
+INC-1095,2025-05-14,17:16,Zero-Day Attack,Critical,205.89.56.170,CRM System,Alice Garcia,N/A,SIEM (Splunk),Contained,Reset User Credentials
+INC-1096,2025-06-28,08:03,Brute Force,Medium,33.215.58.191,Web Server,Wei Chen,N/A,Nessus Scanner,Closed,Notified Affected Users
+INC-1097,2025-02-14,23:50,Malware,Medium,222.154.234.165,Mail Server,Alice Chen,WannaCry,IBM QRadar,Resolved,Revoked Access Tokens
+INC-1098,2025-03-17,02:20,Malware,Medium,156.75.33.33,Domain Controller,Emma Miller,Locky,AWS GuardDuty,Closed,Blocked Malicious Domain
+INC-1099,2026-06-28,09:29,Ransomware,High,130.220.50.204,Payment Gateway,Raj Patel,REvil,Fail2Ban,Investigating,Escalated to Incident Response Team
+INC-1100,2026-02-28,10:52,Cross Site Scripting,Critical,117.204.212.187,Web Server,David Khan,N/A,Nessus Scanner,Contained,Restored from Backup
+INC-1101,2025-03-10,02:53,Trojan,High,22.47.221.25,Payment Gateway,Sofia Lee,Locky,Snort IDS,Closed,Blocked Source IP
+INC-1102,2025-12-04,21:07,Brute Force,Critical,106.181.216.223,Payment Gateway,Alice Sharma,N/A,AWS GuardDuty,Contained,Restored from Backup
+INC-1103,2025-06-08,21:30,Malware,High,58.55.179.217,Employee Workstation,David Kumar,WannaCry,Wireshark,Closed,Reset User Credentials
+INC-1104,2025-01-27,19:59,DNS Spoofing,Medium,169.136.14.47,Domain Controller,Sofia Nguyen,N/A,Wireshark,Contained,Restored from Backup
+INC-1105,2025-05-27,18:42,Phishing,Low,103.35.72.190,Customer Database,Alice Kumar,N/A,Fail2Ban,Investigating,Escalated to Incident Response Team
+INC-1106,2025-06-11,11:19,SQL Injection,Medium,185.166.43.227,Mail Server,Maria Garcia,N/A,AWS GuardDuty,Open,Revoked Access Tokens
+INC-1107,2026-03-11,15:38,Malware,Medium,114.212.139.56,Internal Wiki,Carlos Kumar,Qbot,Nessus Scanner,Resolved,Isolated Affected Host
+INC-1108,2026-05-14,16:42,Spyware,High,79.23.112.102,Cloud Storage Bucket,Alice Johnson,REvil,Microsoft Defender,Contained,Reset User Credentials
+INC-1109,2025-09-19,09:20,DNS Spoofing,Low,31.3.254.192,Finance System,Maria Garcia,N/A,IBM QRadar,Closed,Blocked Malicious Domain
+INC-1110,2025-12-29,02:25,Worm,Medium,221.21.223.5,VPN Gateway,Tom Kumar,Qbot,Nessus Scanner,Closed,Escalated to Incident Response Team
+INC-1111,2026-03-04,09:07,Brute Force,Medium,104.10.166.44,Internal Wiki,Emma Chen,N/A,Nessus Scanner,Open,Escalated to Incident Response Team
+INC-1112,2026-03-23,18:25,Zero-Day Attack,Medium,135.40.202.223,Domain Controller,Sofia Lee,N/A,Microsoft Defender,Contained,Disabled User Account
+INC-1113,2026-06-28,16:12,Malware,Medium,199.178.179.187,CRM System,Liam Patel,Emotet,Snort IDS,Investigating,Isolated Affected Host
+INC-1114,2025-06-06,20:04,Trojan,Medium,46.252.237.194,Cloud Storage Bucket,Noah Brown,TrickBot,Palo Alto Firewall Logs,Closed,Revoked Access Tokens
+INC-1115,2025-11-27,20:20,Insider Threat,Critical,39.225.34.121,VPN Gateway,Liam Sharma,N/A,Wireshark,Closed,Blocked Source IP
+INC-1116,2026-04-18,14:02,Ransomware,High,15.188.146.20,Customer Database,Aisha Patel,Ryuk,CrowdStrike Falcon,Closed,Notified Affected Users
+INC-1117,2025-02-12,14:58,DDoS,High,208.96.164.155,VPN Gateway,Carlos Garcia,N/A,SIEM (Splunk),Resolved,Isolated Affected Host
+INC-1118,2025-12-18,22:05,DNS Spoofing,Critical,130.88.20.64,Payment Gateway,Wei Chen,N/A,Fail2Ban,Closed,Notified Affected Users
+INC-1119,2026-02-01,13:49,Trojan,Medium,87.26.171.17,HR Portal,Raj Diaz,Ryuk,IBM QRadar,Contained,Applied Security Patch
+INC-1120,2025-06-03,10:05,Credential Stuffing,High,150.72.179.80,Customer Database,Sofia Miller,N/A,IBM QRadar,Investigating,Notified Affected Users

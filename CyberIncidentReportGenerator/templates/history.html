@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}CyberGuard | Report History{% endblock %}
+
+{% block content %}
+<h1 class="page-title">Report History</h1>
+<p class="page-subtitle">All previously generated and saved incident reports.</p>
+
+{% if reports|length == 0 %}
+  <div class="empty-state">
+    <p>No reports saved yet.</p>
+    <a href="{{ url_for('incident_form') }}" class="btn btn-primary">Create your first report</a>
+  </div>
+{% else %}
+<div class="table-wrapper">
+  <table class="history-table">
+    <thead>
+      <tr>
+        <th>Incident ID</th>
+        <th>Date</th>
+        <th>Attack Type</th>
+        <th>Severity</th>
+        <th>Status</th>
+        <th>Saved At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in reports %}
+      <tr>
+        <td>{{ r.incident_id }}</td>
+        <td>{{ r.date }}</td>
+        <td>{{ r.attack_type }}</td>
+        <td><span class="badge severity-{{ r.severity | lower }}">{{ r.severity }}</span></td>
+        <td>{{ r.status }}</td>
+        <td>{{ r.created_at }}</td>
+        <td class="actions-cell">
+          <a href="{{ url_for('view_report', report_id=r.id) }}" class="btn btn-small btn-outline">Open</a>
+          <a href="{{ url_for('download_saved_pdf', report_id=r.id) }}" class="btn btn-small btn-secondary">PDF</a>
+          <form action="{{ url_for('delete', report_id=r.id) }}" method="POST" style="display:inline;"
+                onsubmit="return confirm('Delete this report permanently?');">
+            <button type="submit" class="btn btn-small btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,285 @@
+/* =========================================================
+   CyberGuard Incident Report Generator — Dark Mode Theme
+   Colors: Navy Blue / Black / White + severity accent colors
+   ========================================================= */
+
+:root {
+  --bg-primary: #0d1321;
+  --bg-secondary: #1b263b;
+  --bg-card: #17223b;
+  --border-color: #2a3a55;
+  --text-primary: #f1f5fb;
+  --text-secondary: #9db0c9;
+  --accent: #4361ee;
+  --accent-hover: #5a75f0;
+
+  --critical: #e63946;
+  --high: #f77f00;
+  --medium: #fcbf49;
+  --low: #2a9d8f;
+
+  --danger: #e63946;
+  --success: #2a9d8f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-secondary);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar-brand {
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand-icon { font-size: 1.3rem; }
+.navbar-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-left: 1.8rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar-links a:hover { color: var(--text-primary); }
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  padding: 3.5rem 1rem;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+.hero h1 { font-size: 2.3rem; margin-bottom: 1rem; }
+.hero-subtitle {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.feature-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.feature-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.feature-card h3 { margin: 0.3rem 0; }
+.feature-card p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.5; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-secondary { background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-color); }
+.btn-secondary:hover { border-color: var(--accent); }
+.btn-outline { background: transparent; color: var(--text-primary); border: 1px solid var(--border-color); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.btn-danger { background: var(--danger); color: white; }
+.btn-danger:hover { opacity: 0.85; }
+.btn-large { font-size: 1.05rem; padding: 0.9rem 2rem; }
+.btn-small { padding: 0.35rem 0.8rem; font-size: 0.8rem; }
+
+/* ---------- Page titles ---------- */
+.page-title { font-size: 1.8rem; margin-bottom: 0.3rem; }
+.page-subtitle { color: var(--text-secondary); margin-bottom: 1.8rem; }
+
+/* ---------- Flash messages ---------- */
+.flash-wrapper { margin-bottom: 1.2rem; }
+.flash {
+  padding: 0.8rem 1.1rem;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  font-size: 0.92rem;
+}
+.flash-error { background: rgba(230, 57, 70, 0.15); border: 1px solid var(--danger); color: #ff8f96; }
+.flash-success { background: rgba(42, 157, 143, 0.15); border: 1px solid var(--success); color: #7fe0d3; }
+
+/* ---------- Form ---------- */
+.incident-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 2rem;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.2rem;
+}
+.form-group-wide { grid-column: 1 / -1; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+.form-group input, .form-group select {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.65rem 0.8rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.field-error { color: var(--critical); font-size: 0.78rem; margin-top: 0.3rem; display: block; }
+.input-error { border-color: var(--critical) !important; box-shadow: 0 0 0 1px var(--critical); }
+.form-actions { display: flex; gap: 0.8rem; margin-top: 1.6rem; flex-wrap: wrap; }
+.form-note { color: var(--text-secondary); font-size: 0.82rem; margin-top: 1rem; }
+
+/* ---------- Report display ---------- */
+.report-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.report-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.report-body { display: flex; flex-direction: column; gap: 1.1rem; margin-bottom: 1.5rem; }
+.report-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+}
+.report-section h2 { margin: 0 0 0.5rem 0; font-size: 1.05rem; }
+.report-section p { margin: 0; color: var(--text-secondary); line-height: 1.6; }
+.report-plain-text {
+  white-space: pre-wrap;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.4rem;
+  line-height: 1.6;
+  font-family: inherit;
+}
+
+/* ---------- Severity badges ---------- */
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.severity-critical { background: rgba(230, 57, 70, 0.2); color: var(--critical); border: 1px solid var(--critical); }
+.severity-high { background: rgba(247, 127, 0, 0.2); color: var(--high); border: 1px solid var(--high); }
+.severity-medium { background: rgba(252, 191, 73, 0.2); color: var(--medium); border: 1px solid var(--medium); }
+.severity-low { background: rgba(42, 157, 143, 0.2); color: var(--low); border: 1px solid var(--low); }
+
+/* ---------- History table ---------- */
+.table-wrapper { overflow-x: auto; }
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.history-table th, .history-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.88rem;
+}
+.history-table th {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+.history-table tr:hover td { background: rgba(67, 97, 238, 0.06); }
+.actions-cell { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-secondary);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  padding: 1.2rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .navbar { flex-direction: column; gap: 0.6rem; padding: 1rem; }
+  .navbar-links a { margin: 0 0.7rem; }
+  .hero h1 { font-size: 1.6rem; }
+}

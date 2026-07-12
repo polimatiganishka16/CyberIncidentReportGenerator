@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% block title %}CyberGuard | New Incident{% endblock %}
+
+{% block content %}
+<h1 class="page-title">New Incident Report</h1>
+<p class="page-subtitle">Fill in the incident details below to generate a professional report.</p>
+
+<form id="incident-form" class="incident-form" action="{{ url_for('generate') }}" method="POST" novalidate>
+
+  <div class="form-grid">
+
+    <div class="form-group">
+      <label for="incident_id">Incident ID</label>
+      <input type="text" id="incident_id" name="incident_id" placeholder="e.g. INC-1001"
+             value="{{ values.get('incident_id', '') }}">
+      {% if errors.get('incident_id') %}<span class="field-error">{{ errors['incident_id'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" value="{{ values.get('date', '') }}">
+      {% if errors.get('date') %}<span class="field-error">{{ errors['date'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" value="{{ values.get('time', '') }}">
+      {% if errors.get('time') %}<span class="field-error">{{ errors['time'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="attack_type">Attack Type</label>
+      <select id="attack_type" name="attack_type">
+        <option value="">-- Select Attack Type --</option>
+        {% for type in ["Phishing","Malware","Trojan","Worm","Spyware","Ransomware",
+                         "SQL Injection","Cross Site Scripting","DDoS","Brute Force",
+                         "Insider Threat","Credential Stuffing","DNS Spoofing","Zero-Day Attack"] %}
+          <option value="{{ type }}" {% if values.get('attack_type') == type %}selected{% endif %}>{{ type }}</option>
+        {% endfor %}
+      </select>
+      {% if errors.get('attack_type') %}<span class="field-error">{{ errors['attack_type'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="severity">Severity</label>
+      <select id="severity" name="severity">
+        <option value="">-- Select Severity --</option>
+        {% for level in ["Low","Medium","High","Critical"] %}
+          <option value="{{ level }}" {% if values.get('severity') == level %}selected{% endif %}>{{ level }}</option>
+        {% endfor %}
+      </select>
+      {% if errors.get('severity') %}<span class="field-error">{{ errors['severity'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="source_ip">Source IP</label>
+      <input type="text" id="source_ip" name="source_ip" placeholder="e.g. 192.168.1.25"
+             value="{{ values.get('source_ip', '') }}">
+      {% if errors.get('source_ip') %}<span class="field-error">{{ errors['source_ip'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="destination_system">Destination System</label>
+      <input type="text" id="destination_system" name="destination_system" placeholder="e.g. Mail Server"
+             value="{{ values.get('destination_system', '') }}">
+      {% if errors.get('destination_system') %}<span class="field-error">{{ errors['destination_system'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="affected_user">Affected User</label>
+      <input type="text" id="affected_user" name="affected_user" placeholder="e.g. Jane Doe"
+             value="{{ values.get('affected_user', '') }}">
+      {% if errors.get('affected_user') %}<span class="field-error">{{ errors['affected_user'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="malware">Malware</label>
+      <input type="text" id="malware" name="malware" placeholder="e.g. Trojan.XYZ or N/A"
+             value="{{ values.get('malware', '') }}">
+      {% if errors.get('malware') %}<span class="field-error">{{ errors['malware'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="detection_tool">Detection Tool</label>
+      <input type="text" id="detection_tool" name="detection_tool" placeholder="e.g. SIEM (Splunk)"
+             value="{{ values.get('detection_tool', '') }}">
+      {% if errors.get('detection_tool') %}<span class="field-error">{{ errors['detection_tool'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select id="status" name="status">
+        <option value="">-- Select Status --</option>
+        {% for s in ["Open","Investigating","Contained","Resolved","Closed"] %}
+          <option value="{{ s }}" {% if values.get('status') == s %}selected{% endif %}>{{ s }}</option>
+        {% endfor %}
+      </select>
+      {% if errors.get('status') %}<span class="field-error">{{ errors['status'] }}</span>{% endif %}
+    </div>
+
+    <div class="form-group form-group-wide">
+      <label for="action_taken">Action Taken</label>
+      <input type="text" id="action_taken" name="action_taken" placeholder="e.g. Blocked Source IP"
+             value="{{ values.get('action_taken', '') }}">
+      {% if errors.get('action_taken') %}<span class="field-error">{{ errors['action_taken'] }}</span>{% endif %}
+    </div>
+
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Generate Report</button>
+    <button type="reset" class="btn btn-secondary" id="clear-form-btn">Clear Form</button>
+  </div>
+
+  <p class="form-note">Report generation uses FLAN-T5 and may take a few seconds, especially on first use.</p>
+</form>
+{% endblock %}

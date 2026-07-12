@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}CyberGuard | Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1>Cybersecurity Incident Report Generator</h1>
+  <p class="hero-subtitle">
+    Turn raw incident data into polished, professional cybersecurity incident reports
+    in seconds &mdash; powered by an NLP data-to-text generation model (FLAN-T5).
+  </p>
+  <a href="{{ url_for('incident_form') }}" class="btn btn-primary btn-large">Generate Report</a>
+</section>
+
+<section class="features">
+  <div class="feature-card">
+    <div class="feature-icon">&#128221;</div>
+    <h3>Structured Input</h3>
+    <p>Enter incident details like attack type, severity, IPs and affected systems through a guided form.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">&#129504;</div>
+    <h3>AI-Generated Reports</h3>
+    <p>FLAN-T5 converts your structured data into a clear, professional narrative report.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">&#128190;</div>
+    <h3>Save &amp; Track</h3>
+    <p>Store every report in a local database and revisit your full incident history anytime.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">&#128196;</div>
+    <h3>PDF Export</h3>
+    <p>Download any report as a clean, shareable PDF for stakeholders and audits.</p>
+  </div>
+</section>
+{% endblock %}
